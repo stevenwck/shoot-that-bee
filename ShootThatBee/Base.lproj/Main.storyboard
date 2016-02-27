@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="jDq-Ry-NL2">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="jDq-Ry-NL2">
+                                <rect key="frame" x="0.0" y="-50" width="629" height="650"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jDq-Ry-NL2" secondAttribute="height" multiplier="1:1" id="mUU-fB-AaT"/>
                                 </constraints>
@@ -100,8 +100,8 @@
                             <constraint firstItem="kCA-jS-WlU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="QgE-dn-SPX"/>
                             <constraint firstItem="YOn-8V-PB0" firstAttribute="top" secondItem="9uX-4e-dnM" secondAttribute="bottom" constant="8" id="V0J-87-hmm"/>
                             <constraint firstItem="jDq-Ry-NL2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y0A-5d-Qic"/>
-                            <constraint firstItem="jDq-Ry-NL2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YoQ-vn-Jbf"/>
                             <constraint firstItem="2NS-BF-eOR" firstAttribute="centerY" secondItem="9uX-4e-dnM" secondAttribute="centerY" id="aq8-TO-oW2"/>
+                            <constraint firstItem="jDq-Ry-NL2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-50" id="e4P-Ki-wH7"/>
                             <constraint firstItem="YOn-8V-PB0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eqM-d3-ifU"/>
                             <constraint firstItem="YOn-8V-PB0" firstAttribute="top" secondItem="a7m-xM-KdG" secondAttribute="bottom" constant="10" id="ffP-2N-dvo"/>
                             <constraint firstItem="hrt-gs-qTT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="iUp-ru-5u6"/>
