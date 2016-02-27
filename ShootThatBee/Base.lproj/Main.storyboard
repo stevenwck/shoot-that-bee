@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -32,7 +33,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap the Sun to Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1p-K9-eLZ" userLabel="tapLabel">
-                                <rect key="frame" x="107" y="86" width="386" height="95"/>
+                                <rect key="frame" x="107" y="386" width="386" height="95"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="50"/>
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -80,18 +81,22 @@
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="hrt-gs-qTT">
+                                <rect key="frame" x="46" y="83" width="472" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jDq-Ry-NL2" secondAttribute="bottom" id="53E-ke-7LO"/>
                             <constraint firstItem="a7m-xM-KdG" firstAttribute="top" secondItem="2NS-BF-eOR" secondAttribute="bottom" constant="5" id="6R7-Qw-eNr"/>
+                            <constraint firstItem="hrt-gs-qTT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7ts-RY-z3w"/>
                             <constraint firstItem="Be6-J1-YZz" firstAttribute="leading" secondItem="5T5-kF-8TT" secondAttribute="trailing" constant="5" id="8yo-Ca-j83"/>
                             <constraint firstItem="jDq-Ry-NL2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9FF-0G-5A4"/>
+                            <constraint firstItem="b1p-K9-eLZ" firstAttribute="top" secondItem="9uX-4e-dnM" secondAttribute="bottom" constant="5" id="FS1-Hh-S1p"/>
                             <constraint firstItem="Be6-J1-YZz" firstAttribute="centerY" secondItem="5T5-kF-8TT" secondAttribute="centerY" id="GyI-iA-UVI"/>
                             <constraint firstItem="2NS-BF-eOR" firstAttribute="centerX" secondItem="9uX-4e-dnM" secondAttribute="centerX" id="Hrw-bd-SL4"/>
                             <constraint firstItem="5T5-kF-8TT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="IvV-aR-g3K"/>
                             <constraint firstItem="a7m-xM-KdG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lxh-tJ-yV4"/>
-                            <constraint firstItem="9uX-4e-dnM" firstAttribute="top" secondItem="b1p-K9-eLZ" secondAttribute="bottom" constant="38" id="Mou-fF-WJE"/>
                             <constraint firstItem="kCA-jS-WlU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="QgE-dn-SPX"/>
                             <constraint firstItem="YOn-8V-PB0" firstAttribute="top" secondItem="9uX-4e-dnM" secondAttribute="bottom" constant="8" id="V0J-87-hmm"/>
                             <constraint firstItem="jDq-Ry-NL2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y0A-5d-Qic"/>
@@ -99,7 +104,10 @@
                             <constraint firstItem="2NS-BF-eOR" firstAttribute="centerY" secondItem="9uX-4e-dnM" secondAttribute="centerY" id="aq8-TO-oW2"/>
                             <constraint firstItem="YOn-8V-PB0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eqM-d3-ifU"/>
                             <constraint firstItem="YOn-8V-PB0" firstAttribute="top" secondItem="a7m-xM-KdG" secondAttribute="bottom" constant="10" id="ffP-2N-dvo"/>
+                            <constraint firstItem="hrt-gs-qTT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="iUp-ru-5u6"/>
                             <constraint firstItem="9uX-4e-dnM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lc7-9G-Bz0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hrt-gs-qTT" secondAttribute="trailing" constant="20" id="ls4-Uy-MjV"/>
+                            <constraint firstItem="9uX-4e-dnM" firstAttribute="top" secondItem="hrt-gs-qTT" secondAttribute="bottom" constant="10" id="p6Q-cG-rsC"/>
                             <constraint firstItem="b1p-K9-eLZ" firstAttribute="centerX" secondItem="9uX-4e-dnM" secondAttribute="centerX" id="qeR-xD-Z4R"/>
                             <constraint firstItem="5T5-kF-8TT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rRE-Pq-3Zq"/>
                             <constraint firstItem="9uX-4e-dnM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sWE-dJ-5lt"/>
@@ -113,6 +121,7 @@
                         <outlet property="centerBeeR1" destination="5T5-kF-8TT" id="FjS-Cg-hlg"/>
                         <outlet property="currentScoreLabel" destination="YOn-8V-PB0" id="3I0-YJ-rGR"/>
                         <outlet property="leftBeeR1C1" destination="kCA-jS-WlU" id="uTT-eg-t9s"/>
+                        <outlet property="logo" destination="hrt-gs-qTT" id="5Wy-bp-uAJ"/>
                         <outlet property="rightBeeR1C1" destination="Be6-J1-YZz" id="Qih-S3-9JC"/>
                         <outlet property="scoreLabel" destination="a7m-xM-KdG" id="Ej1-Hs-SPq"/>
                         <outlet property="startButton" destination="9uX-4e-dnM" id="8pf-pZ-eci"/>
@@ -126,6 +135,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="636" height="119"/>
         <image name="SunflowerBtn" width="150" height="141"/>
         <image name="SunglassBee" width="70" height="76"/>
         <image name="bg" width="1667" height="1667"/>

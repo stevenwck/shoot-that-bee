@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var currentScoreLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var logo: UIImageView!
     
     @IBOutlet weak var centerBeeR1: UIButton!
     @IBOutlet weak var leftBeeR1C1: UIButton!
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
 
         delay = secsPerTick * Double(NSEC_PER_SEC)
 
+        logo.hidden = true
         tapLabel.hidden = true
         startButton.hidden = true
         stopButton.hidden = false
@@ -84,6 +86,7 @@ class ViewController: UIViewController {
 
     
     func endGame() {
+        logo.hidden = false
         tapLabel.hidden = false
         startButton.hidden = false
         stopButton.hidden = true
