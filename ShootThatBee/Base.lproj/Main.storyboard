@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShootThatBee" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,90 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="jDq-Ry-NL2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jDq-Ry-NL2" secondAttribute="height" multiplier="1:1" id="mUU-fB-AaT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uX-4e-dnM" userLabel="PlayButton">
+                                <rect key="frame" x="181" y="219" width="239" height="161"/>
+                                <state key="normal" image="SunflowerBtn"/>
+                                <connections>
+                                    <action selector="startPlaying:" destination="BYZ-38-t0r" eventType="touchUpInside" id="40Y-aR-H6B"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap the Sun to Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1p-K9-eLZ" userLabel="tapLabel">
+                                <rect key="frame" x="107" y="86" width="386" height="95"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="50"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NS-BF-eOR" userLabel="StopButton">
+                                <rect key="frame" x="100" y="246" width="400" height="108"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="50"/>
+                                <state key="normal" title="Stop This Madness">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopPlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IAA-Bg-5Sn"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5T5-kF-8TT" userLabel="CenterBeeR1">
+                                <rect key="frame" x="265" y="25" width="70" height="76"/>
+                                <state key="normal" image="SunglassBee"/>
+                                <connections>
+                                    <action selector="tapOnBee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jUP-0s-VPa"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCA-jS-WlU" userLabel="LeftBeeR1C1">
+                                <rect key="frame" x="187" y="25" width="70" height="76"/>
+                                <state key="normal" image="SunglassBee"/>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Be6-J1-YZz" userLabel="RightBeeR1C1">
+                                <rect key="frame" x="350" y="25" width="70" height="76"/>
+                                <state key="normal" image="SunglassBee"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jDq-Ry-NL2" secondAttribute="bottom" id="53E-ke-7LO"/>
+                            <constraint firstItem="Be6-J1-YZz" firstAttribute="leading" secondItem="5T5-kF-8TT" secondAttribute="trailing" constant="5" id="8yo-Ca-j83"/>
+                            <constraint firstItem="jDq-Ry-NL2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9FF-0G-5A4"/>
+                            <constraint firstItem="Be6-J1-YZz" firstAttribute="centerY" secondItem="5T5-kF-8TT" secondAttribute="centerY" id="GyI-iA-UVI"/>
+                            <constraint firstItem="2NS-BF-eOR" firstAttribute="centerX" secondItem="9uX-4e-dnM" secondAttribute="centerX" id="Hrw-bd-SL4"/>
+                            <constraint firstItem="5T5-kF-8TT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="IvV-aR-g3K"/>
+                            <constraint firstItem="9uX-4e-dnM" firstAttribute="top" secondItem="b1p-K9-eLZ" secondAttribute="bottom" constant="38" id="Mou-fF-WJE"/>
+                            <constraint firstItem="kCA-jS-WlU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="QgE-dn-SPX"/>
+                            <constraint firstItem="jDq-Ry-NL2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y0A-5d-Qic"/>
+                            <constraint firstItem="jDq-Ry-NL2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YoQ-vn-Jbf"/>
+                            <constraint firstItem="2NS-BF-eOR" firstAttribute="centerY" secondItem="9uX-4e-dnM" secondAttribute="centerY" id="aq8-TO-oW2"/>
+                            <constraint firstItem="9uX-4e-dnM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lc7-9G-Bz0"/>
+                            <constraint firstItem="b1p-K9-eLZ" firstAttribute="centerX" secondItem="9uX-4e-dnM" secondAttribute="centerX" id="qeR-xD-Z4R"/>
+                            <constraint firstItem="5T5-kF-8TT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rRE-Pq-3Zq"/>
+                            <constraint firstItem="9uX-4e-dnM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sWE-dJ-5lt"/>
+                            <constraint firstAttribute="trailing" secondItem="jDq-Ry-NL2" secondAttribute="trailing" id="t52-dx-LNR"/>
+                            <constraint firstItem="9uX-4e-dnM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uJK-XF-NuE"/>
+                            <constraint firstItem="5T5-kF-8TT" firstAttribute="leading" secondItem="kCA-jS-WlU" secondAttribute="trailing" constant="5" id="vv0-ml-q2i"/>
+                            <constraint firstItem="5T5-kF-8TT" firstAttribute="centerY" secondItem="kCA-jS-WlU" secondAttribute="centerY" id="wb1-fw-iIH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="centerBeeR1" destination="5T5-kF-8TT" id="FjS-Cg-hlg"/>
+                        <outlet property="startButton" destination="9uX-4e-dnM" id="8pf-pZ-eci"/>
+                        <outlet property="stopButton" destination="2NS-BF-eOR" id="Qv3-lp-K4b"/>
+                        <outlet property="tapLabel" destination="b1p-K9-eLZ" id="eAE-QE-UGr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SunflowerBtn" width="150" height="141"/>
+        <image name="SunglassBee" width="70" height="76"/>
+        <image name="bg" width="1667" height="1667"/>
+    </resources>
 </document>
