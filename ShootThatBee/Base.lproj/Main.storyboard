@@ -44,7 +44,7 @@
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="stopPlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IAA-Bg-5Sn"/>
+                                    <action selector="stopPlaying:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ru1-zO-DbC"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5T5-kF-8TT" userLabel="CenterBeeR1">
@@ -57,25 +57,48 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCA-jS-WlU" userLabel="LeftBeeR1C1">
                                 <rect key="frame" x="187" y="25" width="70" height="76"/>
                                 <state key="normal" image="SunglassBee"/>
+                                <connections>
+                                    <action selector="tapOnBee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ymh-PW-B1a"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Be6-J1-YZz" userLabel="RightBeeR1C1">
                                 <rect key="frame" x="350" y="25" width="70" height="76"/>
                                 <state key="normal" image="SunglassBee"/>
+                                <connections>
+                                    <action selector="tapOnBee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yXN-wZ-cKA"/>
+                                </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7m-xM-KdG">
+                                <rect key="frame" x="221" y="357" width="158" height="21"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 / 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOn-8V-PB0" userLabel="currentScore">
+                                <rect key="frame" x="177" y="388" width="247" height="71"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="56"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jDq-Ry-NL2" secondAttribute="bottom" id="53E-ke-7LO"/>
+                            <constraint firstItem="a7m-xM-KdG" firstAttribute="top" secondItem="2NS-BF-eOR" secondAttribute="bottom" constant="5" id="6R7-Qw-eNr"/>
                             <constraint firstItem="Be6-J1-YZz" firstAttribute="leading" secondItem="5T5-kF-8TT" secondAttribute="trailing" constant="5" id="8yo-Ca-j83"/>
                             <constraint firstItem="jDq-Ry-NL2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9FF-0G-5A4"/>
                             <constraint firstItem="Be6-J1-YZz" firstAttribute="centerY" secondItem="5T5-kF-8TT" secondAttribute="centerY" id="GyI-iA-UVI"/>
                             <constraint firstItem="2NS-BF-eOR" firstAttribute="centerX" secondItem="9uX-4e-dnM" secondAttribute="centerX" id="Hrw-bd-SL4"/>
                             <constraint firstItem="5T5-kF-8TT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="IvV-aR-g3K"/>
+                            <constraint firstItem="a7m-xM-KdG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lxh-tJ-yV4"/>
                             <constraint firstItem="9uX-4e-dnM" firstAttribute="top" secondItem="b1p-K9-eLZ" secondAttribute="bottom" constant="38" id="Mou-fF-WJE"/>
                             <constraint firstItem="kCA-jS-WlU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="QgE-dn-SPX"/>
+                            <constraint firstItem="YOn-8V-PB0" firstAttribute="top" secondItem="9uX-4e-dnM" secondAttribute="bottom" constant="8" id="V0J-87-hmm"/>
                             <constraint firstItem="jDq-Ry-NL2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y0A-5d-Qic"/>
                             <constraint firstItem="jDq-Ry-NL2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YoQ-vn-Jbf"/>
                             <constraint firstItem="2NS-BF-eOR" firstAttribute="centerY" secondItem="9uX-4e-dnM" secondAttribute="centerY" id="aq8-TO-oW2"/>
+                            <constraint firstItem="YOn-8V-PB0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eqM-d3-ifU"/>
+                            <constraint firstItem="YOn-8V-PB0" firstAttribute="top" secondItem="a7m-xM-KdG" secondAttribute="bottom" constant="10" id="ffP-2N-dvo"/>
                             <constraint firstItem="9uX-4e-dnM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lc7-9G-Bz0"/>
                             <constraint firstItem="b1p-K9-eLZ" firstAttribute="centerX" secondItem="9uX-4e-dnM" secondAttribute="centerX" id="qeR-xD-Z4R"/>
                             <constraint firstItem="5T5-kF-8TT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rRE-Pq-3Zq"/>
@@ -88,6 +111,10 @@
                     </view>
                     <connections>
                         <outlet property="centerBeeR1" destination="5T5-kF-8TT" id="FjS-Cg-hlg"/>
+                        <outlet property="currentScoreLabel" destination="YOn-8V-PB0" id="3I0-YJ-rGR"/>
+                        <outlet property="leftBeeR1C1" destination="kCA-jS-WlU" id="uTT-eg-t9s"/>
+                        <outlet property="rightBeeR1C1" destination="Be6-J1-YZz" id="Qih-S3-9JC"/>
+                        <outlet property="scoreLabel" destination="a7m-xM-KdG" id="Ej1-Hs-SPq"/>
                         <outlet property="startButton" destination="9uX-4e-dnM" id="8pf-pZ-eci"/>
                         <outlet property="stopButton" destination="2NS-BF-eOR" id="Qv3-lp-K4b"/>
                         <outlet property="tapLabel" destination="b1p-K9-eLZ" id="eAE-QE-UGr"/>
